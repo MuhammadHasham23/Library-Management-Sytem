@@ -15,9 +15,9 @@ Just download the project and deploy on a server if working locally download (XA
 
 ### Prerequisites
 
-*XAMPP (if localhost)
+* XAMPP (if localhost)
 
-*Any Server
+* Any Server
 
 You would also need SQL to manage backend.
 
