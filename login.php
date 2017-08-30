@@ -1,12 +1,13 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="./loginstyle.css"/>
+  <link rel="stylesheet" href="./style.css"/>
 </head>
 <body>
 <div class = "container">
@@ -26,15 +27,15 @@ session_start();
 				$password = $_POST['Password'];	
 				$con = mysqli_connect('localhost','root','','library');
 				if($con){
-					$query = "select * from public_login where 
-					user_name='$username' AND user_pass='$password'";
+					$query = "select * from admin_login where 
+					admin_name='$username' AND admin_pass='$password'";
 					$result = mysqli_query($con,$query);
 					if(mysqli_num_rows($result)>0){
-						$_SESSION['public_user'] = $username;
+						$_SESSION['user'] = $username;
 						$_SESSION['pass'] = $password;
 						echo "<script>
 							alert('You are authenticated!');
-							window.location.href='index.php';
+							window.location.href='home.php';
 						</script>";
 
 					}
