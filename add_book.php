@@ -89,7 +89,7 @@ if(!$_SESSION['user']){
 						alert('Something went wrong!');
 						</script>
 					";	
-					echo "oho prito meray naal wya karlay";
+					echo "something went wrong";
 				}
 				
 			}
